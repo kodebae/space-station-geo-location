@@ -1,7 +1,13 @@
 # space-station-geo-location
 Update description here
 
+## API Information
+http://open-notify.org/Open-Notify-API/ISS-Location-Now/
+
+
 ## Styles
+https://www.npmjs.com/package/react-parallax-tilt
+https://www.npmjs.com/package/particles-bg 
 
 
 ### Getting Started with Create React App
