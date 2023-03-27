@@ -4,7 +4,8 @@ Update description here
 ## API Information
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 
-API can also be used to show how many people are currently in space. 
+ISS Location Now API can also be used to show how many people are currently in space.
+Google Maps API is also used to render the Map.
 
 
 ## Styles
