@@ -4,6 +4,8 @@ Update description here
 ## API Information
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 
+API can also be used to show how many people are currently in space. 
+
 
 ## Styles
 https://www.npmjs.com/package/react-parallax-tilt
