@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './Map.css';
 
 export default function Map() {
   return (
-    <div>Map is here</div>
+    <div className='map-container'>
+        Map is here
+    </div>
   )
 }

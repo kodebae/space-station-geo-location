@@ -1,23 +1,33 @@
-# space-station-geo-location
-Update description here
+# 🛰️ Space Station Geo Location App
+> This project is built with React, Axios, and Google Maps API. It also utilizes and open source API for the ISS location updates. 
 
 ## API Information
-http://open-notify.org/Open-Notify-API/ISS-Location-Now/
+[ISS Location Now](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)
 
-ISS Location Now API can also be used to show how many people are currently in space.
-Google Maps API is also used to render the Map.
+[Google Maps API](https://developers.google.com/maps/documentation/javascript)
 
+<p>ISS Location Now API can also be used to show how many people are currently in space.
+Google Maps API is also used to render the Map.</p>
+
+
+## Packages
+[Google Map React](https://www.npmjs.com/package/google-map-react)
+
+[Axios](https://www.npmjs.com/package/axios)
 
 ## Styles
-https://www.npmjs.com/package/react-parallax-tilt
-https://www.npmjs.com/package/particles-bg 
+[React Parallax Tilt](https://www.npmjs.com/package/react-parallax-tilt)
+
+[Particles BG](https://www.npmjs.com/package/particles-bg)
+
 
 
 ### Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This project was bootstrapped with
+[Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -34,7 +44,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#$## `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
