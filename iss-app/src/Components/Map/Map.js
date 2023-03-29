@@ -1,14 +1,18 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import * as tt from '@tomtom-international/web-sdk-maps'
 import './Map.css'
 
-const long = -80.651070
-const lat = 28.573469
+
+
 
 
 const Map = () => {
 
+    const [map, setMap] = useState({})
+
+    const long = -80.651070
+    const lat = 28.573469
 
    useEffect(()=> {
     var map = tt.map({
@@ -17,13 +21,15 @@ const Map = () => {
         center: [long, lat],
         zoom: 14,
     });
-    map.addControl(new tt.FullscreenControl());
-    map.addControl(new tt.NavigationControl());
+    map.addControl(new tt.FullscreenControl())
+    map.addControl(new tt.NavigationControl())
+
+    setMap(map)
 
    }, [])
 
   return (
-    <div id="map">
+    <div id="map" className='map-container'>
    
     </div>
   )
