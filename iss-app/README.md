@@ -1,5 +1,5 @@
 # 🛰️ Space Station Geo Location App
-> This project is built with React, Axios, and TomTom Maps API. It also utilizes and open source API for the ISS location updates. 
+> This project is built with React, Axios, and TomTom Maps API. This app also utilizes and open source API for the ISS location updates. 
 
 ## API Information
 [ISS Location Now](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)
