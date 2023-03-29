@@ -1,17 +1,17 @@
 # 🛰️ Space Station Geo Location App
-> This project is built with React, Axios, and Google Maps API. It also utilizes and open source API for the ISS location updates. 
+> This project is built with React, Axios, and TomTom Maps API. It also utilizes and open source API for the ISS location updates. 
 
 ## API Information
 [ISS Location Now](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)
 
-[Google Maps API](https://developers.google.com/maps/documentation/javascript)
+[TomTom Maps API](https://developer.tomtom.com/products/maps-api)
 
 <p>ISS Location Now API can also be used to show how many people are currently in space.
-Google Maps API is also used to render the Map.</p>
+TomTom Maps API is also used to render the Map.</p>
 
 
 ## Packages
-[Google Map React](https://www.npmjs.com/package/google-map-react)
+[TomTom Web SDK](https://www.npmjs.com/package/@tomtom-international/web-sdk-maps)
 
 [Axios](https://www.npmjs.com/package/axios)
 
@@ -19,8 +19,6 @@ Google Maps API is also used to render the Map.</p>
 [React Parallax Tilt](https://www.npmjs.com/package/react-parallax-tilt)
 
 [Particles BG](https://www.npmjs.com/package/particles-bg)
-
-
 
 ### Getting Started with Create React App
 

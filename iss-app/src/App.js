@@ -1,6 +1,6 @@
-import './App.css';
-import Header from './Components/Header';
-import Map from './Components/Map/Map';
+import './App.css'
+import Header from './Components/Header'
+import Map from './Components/Map/Map'
 
 
 function App() {
