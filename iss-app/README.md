@@ -18,7 +18,7 @@ TomTom Maps API is also used to render the Map.</p>
 ## Styles
 [React Parallax Tilt](https://www.npmjs.com/package/react-parallax-tilt)
 
-[Particles BG](https://www.npmjs.com/package/particles-bg)
+[React TS Particles](https://www.npmjs.com/package/react-tsparticles)
 
 ### Getting Started with Create React App
 
