@@ -1,8 +1,9 @@
-img {
-    height: 100px;
+.logo {
+    height: 150px;
     width: auto;
     padding: 25px;
-}
+    /* z-index: 5; */
+} 
 div {
     margin: 0px;
 }
