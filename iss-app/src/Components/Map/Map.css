@@ -3,9 +3,13 @@
     width: 100vw;
 }
 
-.iss-icon {
-    position: relative;
-    z-index: 5;
-    width: 125px;
+.marker {
+    background: url('./ISS_spacecraft_model_icon.png');
+    background-size: cover;
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
     height: 55px;
+    border-radius: 50%;
+    background-color: red;
   }

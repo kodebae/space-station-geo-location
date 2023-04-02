@@ -9,6 +9,6 @@ const Logo = () => (
         <img className="logo" alt='iss_emblem' src={image}/>
     </div>
   </Tilt>
-);
+)
 
 export default Logo
