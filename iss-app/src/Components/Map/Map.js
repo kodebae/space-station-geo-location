@@ -21,7 +21,7 @@ const Map = () => {
 
       // Initialize a new map instance with the updated coordinates
       const newMap = tt.map({
-        key: process.env.REACT_APP_API_KEY,
+        key: '6yAZUYt3mAWaf1kAMdG5kpGdW2GTKjOU',
         container: 'map',
         center: [longitude, latitude],
         zoom: 3,
