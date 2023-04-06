@@ -67,13 +67,15 @@ const Map = () => {
       })
         .setLngLat([mapLongitude, mapLatitude])
         .addTo(map)
-        marker.remove()
+        marker.remove() // removes old marker
 
       map.addControl(new tt.FullscreenControl())
       map.addControl(new tt.NavigationControl())
     }
   }, [map, mapLongitude, mapLatitude])
 
+
+  // update the location of the ISS every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       getLocation()
@@ -82,6 +84,8 @@ const Map = () => {
     return () => clearInterval(interval)
   }, [])
 
+
+  // render loading method and map component
   return (
     <>
       {loading ? (
