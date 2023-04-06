@@ -65,9 +65,10 @@ const Map = () => {
       const marker = new tt.Marker({
         element: markerElement,
       })
+      marker.remove()
         .setLngLat([mapLongitude, mapLatitude])
         .addTo(map)
-        marker.remove() // removes old marker
+        
 
       map.addControl(new tt.FullscreenControl())
       map.addControl(new tt.NavigationControl())
@@ -103,7 +104,5 @@ export default Map
 
 /**
  *? The dependency array basically tells the "useEffect" React hook to "only trigger when the dependency array changes".  
- *TODO need to remove the marker each time the map reloads
  * **/
-
 
