@@ -15,7 +15,7 @@ const Map = () => {
     try {
       const res = await axios.get('https://api.wheretheiss.at/v1/satellites/25544')
       let longitude = res.data.longitude
-      let latitude = res.data.latitude;
+      let latitude = res.data.latitude
       setMapLongitude(parseFloat(longitude))
       setMapLatitude(parseFloat(latitude))
       setLoading(false)
@@ -26,12 +26,13 @@ const Map = () => {
 
   useEffect(() => {
     const initializeMap = async () => {
+      setLoading(true)
       try {
         if (!document.getElementById('map')) {
           return
         }
 
-        // Initialize a new map instance with the default coordinates
+ // Initialize a new map instance with the default coordinates
         const newMap = tt.map({
           key: '6yAZUYt3mAWaf1kAMdG5kpGdW2GTKjOU',
           container: 'map',
@@ -39,15 +40,22 @@ const Map = () => {
           zoom: 3,
         })
 
+// Disable draggable feature on map
+        if (newMap) {
+          newMap.dragPan.disable();
+        }
+
         // Set the new map instance
-        setMap(newMap);
+        setMap(newMap)
+        setLoading(false)
       } catch (error) {
         console.log('Error initializing map:', error)
+        setLoading(false)
       }
     }
 
     initializeMap()
-  }, [mapLongitude, mapLatitude])
+  }, [mapLatitude, mapLatitude])
 
   useEffect(() => {
     if (map) {
@@ -66,7 +74,11 @@ const Map = () => {
   }, [map, mapLongitude, mapLatitude])
 
   useEffect(() => {
-    getLocation()
+    const interval = setInterval(() => {
+      getLocation()
+    }, 5000)
+
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -77,10 +89,11 @@ const Map = () => {
         <div id="map" className="map-container"></div>
       )}
     </>
-  );
-};
+  )
+}
 
 export default Map
+
 
 
 
