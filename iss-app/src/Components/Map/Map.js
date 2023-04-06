@@ -67,6 +67,7 @@ const Map = () => {
       })
         .setLngLat([mapLongitude, mapLatitude])
         .addTo(map)
+        marker.remove()
 
       map.addControl(new tt.FullscreenControl())
       map.addControl(new tt.NavigationControl())
