@@ -45,7 +45,7 @@ const Map = () => {
           newMap.dragPan.disable();
         }
 
-        // Set the new map instance
+// Set the new map instance
         setMap(newMap)
         setLoading(false)
       } catch (error) {
@@ -55,7 +55,7 @@ const Map = () => {
     }
 
     initializeMap()
-  }, [mapLatitude, mapLatitude])
+  }, [mapLongitude, mapLatitude])
 
   useEffect(() => {
     if (map) {
@@ -91,7 +91,6 @@ const Map = () => {
     </>
   )
 }
-
 export default Map
 
 
