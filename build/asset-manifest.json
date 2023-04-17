@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6dbd75a.css",
-    "main.js": "/static/js/main.913b6bff.js",
-    "static/media/ISS_spacecraft_model_icon.png": "/static/media/ISS_spacecraft_model_icon.82f1adac6f85d77b7904.png",
+    "main.css": "/static/css/main.bf3d2cf8.css",
+    "main.js": "/static/js/main.6a47c48f.js",
     "static/media/ISS_emblem.png": "/static/media/ISS_emblem.fb9aef7cddff54739ac2.png",
     "index.html": "/index.html",
-    "main.c6dbd75a.css.map": "/static/css/main.c6dbd75a.css.map",
-    "main.913b6bff.js.map": "/static/js/main.913b6bff.js.map"
+    "main.bf3d2cf8.css.map": "/static/css/main.bf3d2cf8.css.map",
+    "main.6a47c48f.js.map": "/static/js/main.6a47c48f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6dbd75a.css",
-    "static/js/main.913b6bff.js"
+    "static/css/main.bf3d2cf8.css",
+    "static/js/main.6a47c48f.js"
   ]
 }
