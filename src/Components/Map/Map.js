@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import * as tt from '@tomtom-international/web-sdk-maps';
-import '@tomtom-international/web-sdk-maps/dist/maps.css';
-import Loading from '../Loading/Loading';
+import React, { useState, useEffect } from 'react'
+import * as tt from '@tomtom-international/web-sdk-maps'
+import '@tomtom-international/web-sdk-maps/dist/maps.css'
+
 
 const Map = () => {
-  const [map, setMap] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [mapCenter, setMapCenter] = useState({
-    lat: 0,
-    lng: 0
-  });
+  const [map, setMap] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [issPosition, setIssPosition] = useState(null)
 
   useEffect(() => {
-    const fetchISSPosition = async () => {
+    const fetchIssPosition = async () => {
       try {
-        const res = await fetch('https://www.n2yo.com/rest/v1/satellite/positions/25544/0/0/0/1?apiKey=BGKQ9M-TS4FPC-UYZ59T-50P4');
-        const data = await res.json();
-        const { latitude, longitude } = data.iss_position;
-        setMapCenter({
-          lat: parseFloat(latitude),
-          lng: parseFloat(longitude)
-        });
+        const response = await fetch(
+          'https://api.wheretheiss.at/v1/satellites/25544'
+        );
+        const data = await response.json()
+        setIssPosition({
+          lat: data.latitude,
+          lng: data.longitude,
+        })
       } catch (error) {
-        console.log('Error getting ISS position:', error);
+        console.log('Error fetching ISS position:', error)
       }
     };
 
-    fetchISSPosition();
-    const intervalId = setInterval(fetchISSPosition, 5000);
-    return () => clearInterval(intervalId);
-  }, []);
+    fetchIssPosition();
+    const intervalId = setInterval(fetchIssPosition, 5000)
+    return () => clearInterval(intervalId)
+  }, [])
 
   useEffect(() => {
     const initializeMap = async () => {
@@ -37,56 +35,39 @@ const Map = () => {
         const newMap = tt.map({
           key: '994x7olG2qsCc9zhLBjzlVHSkvSM040A',
           container: 'map',
-          center: [mapCenter.lng, mapCenter.lat],
+          center: [issPosition?.lng, issPosition?.lat],
           zoom: 3,
-        });
+        })
 
-        setMap(newMap);
-        setLoading(false);
+        const marker = new tt.Marker()
+          .setLngLat([issPosition.lng, issPosition.lat])
+          .addTo(newMap)
+
+        setMap(newMap)
+        setLoading(false)
       } catch (error) {
-        console.log('Error initializing map:', error);
-        setLoading(false);
+        console.log('Error initializing map:', error)
+        setLoading(false)
       }
     };
 
-    initializeMap();
-  }, [mapCenter]);
-
-  useEffect(() => {
-    let marker;
-    if (map) {
-      const markerElement = document.createElement('div');
-      markerElement.className = 'marker';
-  
-      marker = new tt.Marker({ element: markerElement })
-        .setLngLat([mapCenter.lng, mapCenter.lat])
-        .addTo(map)
-        .on('error', (error) => {
-          if (error && error.status === 403) {
-            console.error("There was an error with the authentication credentials");
-          }
-        });
-  
-      return () => {
-        if (marker) {
-          marker.remove();
-        }
-      };
+    if (issPosition) {
+      initializeMap()
     }
-  }, [map, mapCenter]);
+  }, [issPosition])
 
   return (
     <>
       {loading ? (
-        <Loading />
+        <p>Loading map...</p>
       ) : (
-        <div id="map" className="map-container"></div>
+        <div id="map" style={{ height: '500px' }}></div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Map;
+export default Map
 
 
 
