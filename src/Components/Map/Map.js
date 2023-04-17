@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as tt from '@tomtom-international/web-sdk-maps';
 import '@tomtom-international/web-sdk-maps/dist/maps.css';
-import './Map.css';
-import axios from 'axios';
 import Loading from '../Loading/Loading';
-
-// import React, { useState, useEffect } from 'react';
-// import * as tt from '@tomtom-international/web-sdk-maps';
-// import '@tomtom-international/web-sdk-maps/dist/maps.css';
-// import './Map.css';
-// import Loading from '../Loading/Loading';
 
 const Map = () => {
   const [map, setMap] = useState(null);
