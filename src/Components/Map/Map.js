@@ -14,7 +14,7 @@ const Map = () => {
   useEffect(() => {
     const fetchISSPosition = async () => {
       try {
-        const res = await fetch('http://api.open-notify.org/iss-now.json');
+        const res = await fetch('https://www.n2yo.com/rest/v1/satellite/positions/25544/0/0/0/1?apiKey=BGKQ9M-TS4FPC-UYZ59T-50P4');
         const data = await res.json();
         const { latitude, longitude } = data.iss_position;
         setMapCenter({
@@ -87,6 +87,12 @@ const Map = () => {
 };
 
 export default Map;
+
+
+
+
+
+
 
 
 
