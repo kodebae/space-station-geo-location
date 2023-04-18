@@ -1,5 +1,5 @@
 {
-  "name": "iss-app",
+  "name": "space-station-geo-location",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
