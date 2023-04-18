@@ -6,7 +6,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2e4494a3-bcee-44f0-96ff-c57a8796b92f/deploy-status)](https://app.netlify.com/sites/iss-geo-location-app/deploys)
 
 ## API Information
-[Where is it at](https://api.wheretheiss.at/v1/)
+[Where The ISS At?](https://wheretheiss.at/w/developer)
 
 [TomTom Maps API](https://developer.tomtom.com/products/maps-api)
 
