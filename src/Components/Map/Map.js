@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import * as tt from '@tomtom-international/web-sdk-maps'
 import '@tomtom-international/web-sdk-maps/dist/maps.css'
 
-
 const Map = () => {
   const [map, setMap] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -68,13 +67,6 @@ const Map = () => {
 }
 
 export default Map
-
-
-
-
-
-
-
 
 /**
  *? The dependency array basically tells the "useEffect" React hook to "only trigger when the dependency array changes".  
