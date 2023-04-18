@@ -76,9 +76,6 @@ export default Map
 
 
 
-
-
-
 /**
  *? The dependency array basically tells the "useEffect" React hook to "only trigger when the dependency array changes".  
  * **/
