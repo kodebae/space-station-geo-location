@@ -1,7 +1,7 @@
 # 🛰️ Space Station Geo Location App
 > This project is built with React, and TomTom Maps API. This app also utilizes and open source API for the ISS location updates. 
 
-[Linke to deployed site](https://iss-geo-location-app.netlify.app)
+[Link to deployed site](https://iss-geo-location-app.netlify.app)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2e4494a3-bcee-44f0-96ff-c57a8796b92f/deploy-status)](https://app.netlify.com/sites/iss-geo-location-app/deploys)
 
