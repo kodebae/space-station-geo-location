@@ -20,7 +20,7 @@ const particlesLoaded = useCallback(async container => {
     <div>
         <div>
           <Logo/>
-          <h1 className='header-text'>🛰️ International Space Station Tracker</h1>
+          <h1 className='header-text'>🛰️ International Space Station Mapper</h1>
           <Particles className='particles'
           id="tsparticles"
           init={particlesInit}

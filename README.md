@@ -4,7 +4,7 @@
 [link to the deployed site *becomes invalid after 90 days] https://kodebae-iss-geo-location.netlify.app
 
 ## API Information
-[ISS Location Now](https://api.wheretheiss.at/v1)
+[ISS Location Now](https://wheretheiss.at/w/developer)
 
 [TomTom Maps API](https://developer.tomtom.com/products/maps-api)
 
